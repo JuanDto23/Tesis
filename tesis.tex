@@ -74,7 +74,7 @@
 
 \include{0-1-Quote/1-Quote}  
 \include{0-2-Acknowledgments/1-Acknowledgments}          
-\include{0-3-Resumen/1-Resumen}   
+\include{0-3-Abstract/1-Resumen}   
 %\include{0-4-Declaration/1-Declaration}    
 
 %-------------------------------------------------------------------------------
@@ -85,11 +85,17 @@
 \setcounter{tocdepth}{3}    % print table of contents for level 3
 
 \tableofcontents            % Print main index
+\newpage
 
-%: ----------------------- list of figures/tables ------------------------
+%-------------------------------------------------------------------------------
+%                                LIST OF FIGURES/TABLES                                    
+%-------------------------------------------------------------------------------
 
 \listoffigures              % Genera el ínidce de figuras, comentar línea si no se usa
+\newpage
 \listoftables               % Genera índice de tablas, comentar línea si no se usa
+\newpage
+\thispagestyle{empty}~
 
 %-------------------------------------------------------------------------------
 %                                MAIN MATTER                                  
@@ -99,27 +105,39 @@
 
 \def\baselinestretch{1}                   % Line spacing
 
-\input{0-5-Introduccion/1-Motivation-Structure}            
-\input{1-Theory/1-Basics}
-	\input{1-Theory/2-Something_more_specific}
-\input{2-Results/1-Something}
-\input{3-Conclusions/1-Conclusions}        
+\input{1-Introduction/1-Planteamiento}
+	\input{1-Introduction/2-Antecedentes}
+	\input{1-Introduction/3-Objetivos}
+	\input{1-Introduction/3-1-ObjGenerales}
+	\input{1-Introduction/3-2-ObjEspecificos}
+	\input{1-Introduction/4-Metodologia}
+	\input{1-Introduction/5-Justificacion}
+	\input{1-Introduction/6-AlcanceLimitaciones}
+	\input{1-Introduction/7-Descripcion}
+% \input{2-Theory/1-Basics}
+% 	\input{2-Theory/2-Something_more_specific}
+% \input{3-Results/1-Something}
+% \input{4-Conclusions/1-Conclusions}
 
 %-------------------------------------------------------------------------------
 %                               References                                   
 %-------------------------------------------------------------------------------
 
-\appendix
-\input{5-Apendices/1-Something_extra.tex}  
-
 \setlength\bibitemsep{.1\itemsep}
-\printbibliography
+\printbibliography[heading=bibintoc]
 
-\printindex
 %-------------------------------------------------------------------------------
 %                              Appendix                                   
 %-------------------------------------------------------------------------------
 
+% \appendix
+% \input{6-Apendices/1-Something_extra.tex} 
+
+%-------------------------------------------------------------------------------
+%                              Alphabetical index                                  
+%-------------------------------------------------------------------------------
+
+% \printindex
 
            
 \end{document}
