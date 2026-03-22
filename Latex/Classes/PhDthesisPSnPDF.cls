@@ -536,8 +536,8 @@
 	\null\vfill
 	\end{alwayssingle}
 
-	% \newpage
-	% \thispagestyle{empty}~
+	\newpage
+	\thispagestyle{empty}~
 	
 	% \newpage
 	% \begin{alwayssingle}
