@@ -81,11 +81,17 @@
 		\usepackage[utf8]{inputenc}           			% Complete latin alfabet: Accents and so on
 		\spanishdecimal{.}
 		\usepackage{microtype}
-		\usepackage[bibstyle = trad-abbrv, 
-					citestyle = numeric-comp,
-					backend = bibtex,
-					sorting = none,
-					backref=true]{biblatex} %style = trad-abbrv
+		% \usepackage[bibstyle = trad-abbrv, 
+		% 			citestyle = numeric-comp,
+		% 			backend = bibtex,
+		% 			sorting = none,
+		% 			backref=true]{biblatex} %style = trad-abbrv
+		\usepackage[style = alphabetic, 
+            backend = bibtex,
+            sorting = anyt, % Ordena por Alphabetic label, Name (Nombre del autor), Year (Año), Title (Título)
+            giveninits = true,  % Abrevia los nombres de pila a iniciales
+            maxbibnames = 99,   % Muestra todos los autores en la bibliografía
+            backref=true]{biblatex}
 		\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
 
 		\DefineBibliographyStrings{spanish}{%
