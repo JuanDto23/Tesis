@@ -566,17 +566,17 @@
 
 \newenvironment{dedication}
 {
-\begin{alwayssingle}
-	\pagestyle{empty}
-	\vspace*{1.5cm}
-	 {\large{}}
-	\vspace{0.5cm}
-\begin{flushright}
-	\itshape
-}
-{
-\end{flushright}
-\end{alwayssingle}
+	\begin{alwayssingle}
+		\pagestyle{empty}
+		\vspace*{1.5cm}
+		{\large{}}
+		\vspace{0.5cm}
+		\begin{flushright}
+			\itshape
+			}
+			{
+		\end{flushright}
+	\end{alwayssingle}
 }
 
 %---------------------------------------------------------------------------------
