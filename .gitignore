@@ -1,0 +1,32 @@
+# Archivos de respaldo de editores de texto
+*~
+*#*
+*.bak
+
+# Archivos auxiliares y registros generados por LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.d
+*.fls
+*.ilg
+*.ind
+*.toc
+*.lot
+*.lof
+*.log
+*.idx
+*.out
+*.nlo
+*.nls
+*.fdb_latexmk
+
+# Archivos de bibliografía autogenerados (Biber/BibLaTeX)
+*-blx.bib
+*.run.xml
+
+# Archivos de salida generados
+*.dvi
+*.ps
+/tesis.pdf
