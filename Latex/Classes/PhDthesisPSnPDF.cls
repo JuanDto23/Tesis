@@ -99,7 +99,7 @@
 			  backrefpages = {citado en las págs.},% originally "cited on pages"
 		}	
 	
-		\addbibresource{5-References/references.bib}
+		\addbibresource{6-References/references.bib}
 		\addto\captionsspanish{\renewcommand{\figurename}{Fig.}}
 
 	%------------------------- Maths --------------------------------------
