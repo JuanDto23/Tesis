@@ -1,2 +1,54 @@
 \subsection{Características de los autómatas celulares}
 \label{section:caraut}
+
+Los AC poseen estas características:
+\\
+\par
+\textbf{Un enmallado de celdas (\textit{lattice}).} Es una estructura topológica regular que puede ser $n$ dimensional, aunque la mayor parte del trabajo sobre los AC se ha centrado en una y dos dimensiones, véase la figura \ref{fig:n_dimensional_lattice}. Por otro lado, la forma de las celdas comúnmente son de forma cuadrada, pero estas también pueden ser de otras formas, véase la figura \ref{fig:shapes_cells}. \cite{schiff2007cellular}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{2-Theory/figs/n_dimensional_lattice.png}
+  \caption{Enmallado de celdas de una, dos y tres dimensiones. \cite{wolfram2002new}}
+  \label{fig:n_dimensional_lattice}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{2-Theory/figs/shapes_cells.png}
+  \caption{Algunas formas de celdas. \cite{mathew2023discrete}}
+  \label{fig:shapes_cells}
+\end{figure}
+
+\textbf{Conjunto de estados (\textit{states}).} Es un conjunto finito de estados donde cada celda toma uno de los posibles estados de este conjunto. \cite{ilachinski2001cellular}
+\\
+\par
+\textbf{Vecindad (\textit{neighborhood}).} Es una región espacial de celdas adyacentes requeridas para la evolución de una celda en particular (incluyendo a esta misma celda). No hay restricción en el tamaño de la vecindad, excepto que debe ser la misma para todas las celdas. 
+
+Para AC de dos dimensiones, dos vecindades son a menudo considerados: la \emph{vecindad de von Neumann}, el cual consiste de una celda central (la celda que evolucionará) y sus cuatro celdas vecinas geográficas: norte, oeste, sur y este; y la \emph{vecindad de Moore} que contiene, además, las celdas vecinas noreste, noroeste, sureste y suroeste, lo que suma un total de nueve celdas. Véase la figura \ref{fig:neighborhoods}. \cite{chopard1998cellular}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{2-Theory/figs/neighborhoods.png}
+  \caption{Algunos tipos de vecindades de AC de dos dimensiones. \cite{utec2023cellular}}
+  \label{fig:neighborhoods}
+\end{figure}
+
+\textbf{Función de transición local.} Especifica la evolución en cada instante de tiempo (generación) de los estados de cada celda en el enmallado del AC a través de un conjunto de reglas de transición. La función de transición es identica para todas las celdas independientemente de su posición. \cite{chopard1998cellular}
+\\
+\par
+\textbf{Condiciones de frontera.} En la práctica, no se puede trabajar con un enmallado infinito. El enmallado debe ser finito y tener condiciones de frontera. En lugar de tener una regla diferente en los límites del enmallado, una posibilidad es extender el vecindario de las celdas frontera con celdas virtuales para completar la vecindad.
+
+Una condición de frontera \emph{fija} es definida al completar la vecindad con celdas que tienen un valor pre-asignado. Una condición de frontera \emph{adiabática} es obtenida al duplicar el valor de la celda frontera y asignarla en la celda virtual. Una condición de frontera \emph{reflectiva} equivale a copiar el valor de otra celda vecina, de la celda frontera, en la celda virtual. Una condición de frontera \emph{periódica} se obtiene al utilizar el valor de la celda frontera del opuesto extremo en la celda virtual, provocando que los lados izquierdo y derecho estén conectados, así como también los lados de arriba y abajo, formando un toroide. Véase la figura \ref{fig:boundary_conditions}. \cite{chopard1998cellular}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{2-Theory/figs/boundary_conditions.png}
+  \caption{Tipos de condiciones de frontera. \cite{utec2023cellular}}
+  \label{fig:boundary_conditions}
+\end{figure}
+
+\textbf{Configuración inicial.} Es la asignación inicial de los estados de cada celda del enmallado, la cual esta configuración se pasa a la función de transición en la primera generación.
+\\
+\par
+A pesar de la simplicidad de estas características descritas, los AC presentan un comportamiento extremadamente complejo al intentar deducir un patrón global desde comportamientos locales, pues patrones globales y comportamientos locales presentan una correlación muy distante.

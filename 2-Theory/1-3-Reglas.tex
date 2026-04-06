@@ -1,2 +1,12 @@
 \subsection{Reglas del Juego de la Vida}
 \label{section:reglas}
+
+Quizás el AC más conocido sea el Juego de la vida, inventado por John H. Conway. En el Juego de la Vida se utiliza un enmallado de dos dimensiones con celdas de forma cuadrada, donde cada celda tiene dos estados, vivo o muerto, además, cada celda tiene ocho celdas vecinas (vecindad de Moore). La evolución de las celdas se realiza a partir de la aplicación simultánea (y repetidamente) de las siguientes reglas: \cite{ilachinski2001cellular} \cite{gardner1970mathematical}
+
+\begin{itemize}
+  \item \textbf{Sobrevive:} cada celda con dos o tres celdas vecinas vivas sobrevive para la siguiente generación.
+  \item \textbf{Muere:} cada celda con cuatro o más celdas vecinas vivas muere (es eliminada) por sobrepoblación. Cada celda con una o ninguna celda vecina viva, muere por aislamiento.
+  \item \textbf{Nace:} cada celda adyacente a exactamente tres celdas vecinas vivas (ni más ni menos) es una celda que nace. La celda estará viva en el siguiente movimiento por reproducción.
+\end{itemize}
+
+La configuración inicial se considera la primera generación. Es común que en el Juego de la Vida se utilice la condición de frontera periódica. \cite{schiff2007cellular}
