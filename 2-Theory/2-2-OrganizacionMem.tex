@@ -1,2 +1,18 @@
 \subsection{Organización de la memoria}
 \label{section:orgmem}
+
+En una arquitectura MIMD, dependiendo del número de procesadores (o núcleos) involucrados, se dicta el tipo de organización de memoria a utilizar, los cuales se describen a continuación:
+\\
+\par
+\textbf{Memoria compartida (\textit{shared memory}).} Este tipo de organización se presenta cuando la arquitectura tiene un número pequeño o moderado de procesadores o núcleos, típicamente 32 o menos. En los multiprocesadores (arquitectura SMP) con tan pocos procesadores, es posible que estos compartan una única memoria centralizada a la que todos tengan igual acceso, de ahí el término simétrico (Symmetric Multiprocessing, SMP). En los procesadores multinúcleo, la memoria suele compartirse de forma centralizada entre los núcleos; en la actualidad, la mayoría de los multinúcleos existentes funcionan como un SMP. 
+
+La organización de memoria compartida en las arquitecturas SMP también se conoce como acceso uniforme a la memoria (\textit{uniform memory access}, UMA), debido a que todos los procesadores o núcleos tienen la misma latencia de acceso hacia la memoria. La figura \ref{fig:shared_memory} muestra la estructura básica de la organización de memoria compartida de una arquitectura SMP. \cite{hennessy2017computer}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{2-Theory/figs/shared_memory.png}
+  \caption{Estructura de la organización de memoria compartida. \cite{hennessy2017computer}}
+  \label{fig:shared_memory}
+\end{figure}
+
+\textbf{Memoria distribuida (\textit{distributed memory}).} . \cite{hennessy2017computer}

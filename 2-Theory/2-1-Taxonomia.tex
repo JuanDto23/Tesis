@@ -1,2 +1,20 @@
 \subsection{Taxonomía de Flynn}
 \label{section:taxflynn}
+
+La taxonomía de Flynn es una clasificación de arquitecturas de computadoras propuesta por Michael J. Flynn en 1972 y se ha mantenido hasta tiempos modernos desde entonces. La taxonomía clasifica las arquitecturas en base a la magnitud de interacciones (simultaneidad) de sus flujos de instrucciones y datos. Se clasifican cuatro principales categorías: \cite{flynn1972some} \cite{stallings2012computer}
+
+\begin{itemize}
+  \item \textbf{SISD (\textit{Single Instruction Single Data}):} un solo procesador ejecuta un solo flujo de instrucción para operar sobre datos almacenados en una sola memoria. Ejemplo de esta arquitectura son los uniprocesadores.
+  \item \textbf{SIMD (\textit{Single Instruction Multiple Data}):} una sola instrucción controla simultáneamente la ejecución de un número de elementos de procesamiento de forma sincronizada. Cada elemento de procesamiento tiene una memoria de datos asociada. Ejemplos de esta arquitectura son los procesadores vectoriales y las unidades de procesamiento gráfico GPU (\textit{Graphics Processing Unit}).
+  \item \textbf{MISD (\textit{Multiple Instruction Single Data}):} se transmite una secuencia de datos a un conjunto de procesadores, cada uno de los cuales ejecuta una secuencia de instrucciones diferente. Esta arquitectura no está implementada comercialmente, pues no se considera útil.
+  \item \textbf{MIMD (\textit{Multiple Instruction Multiple Data}):} un conjunto de procesadores ejecuta simultáneamente diferentes secuencias de instrucciones sobre diferentes conjuntos de datos. Ejemplos de esta arquitectura son los sistemas SMP (\textit{Symmetric Multiprocessing}), los clústeres y los sistemas NUMA (\textit{Non-Uniform Memory Access}).
+\end{itemize}
+
+La figura \ref{fig:flynn_taxonomy} muestra esta taxonomía de forma jerárquica, añadiendo además ejemplos de sistemas de cada arquitectura. Nótese que en la arquitectura MIMD se describen dos tipos de memoria: memoria compartida (\textit{shared memory}) y memoria distribuida (\textit{distributed memory}), donde en este último se desprende los \emph{clústeres}, que es el tema de interés.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.65\textwidth]{2-Theory/figs/flynn_taxonomy.png}
+  \caption{Taxonomía de Flynn. \cite{stallings2012computer}}
+  \label{fig:flynn_taxonomy}
+\end{figure}
