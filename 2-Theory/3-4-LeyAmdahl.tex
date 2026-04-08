@@ -1,2 +1,18 @@
 \subsection{Ley de Amdahl}
 \label{section:amdahl}
+
+La \emph{ley de Amdahl} establece, a grandes rasgos, que la aceleración que se puede tener en un programa paralelo está limitado por la fracción secuencial (no paralelizable) del programa, independientemente del número de procesadores o núcleos que se añadan.
+
+Teniendo en cuenta lo anterior, entonces el tiempo de ejecución paralelo $T_p$ se puede definir como la suma del tiempo de ejecución de la fracción secuencial $f$ y del tiempo de ejecución de la fracción paralela $\left(1 - f\right)$, esto es:
+
+\[T_p = f \cdot T_s + \left(1 - f\right) \frac{T_s}{p}\]
+
+En consecuencia, podemos redefinir la aceleración $S$ como:
+
+\[S = \frac{T_s}{f \cdot T_s + \left(1 - f\right) \cdot T_s / p} = \frac{1}{f + \left(1 - f\right) / p}\]
+
+Por lo tanto, de acuerdo con la ley de Amdahl, independientemente del número de procesadores o núcleos que se añadan ($p$ se hace cada vez más grande y $\left(1 - f\right) / p$ se hace cada vez más pequeño), la aceleración máxima que se puede tener es:
+
+\[S \le \frac{1}{f}\]
+
+Por ejemplo, si se considera que la parte secuencial de un programa abarca $f = 10\%$ de todo el programa paralelo, entonces a lo mucho tendríamos una aceleración de $10$, sin importar si tenemos miles de procesadores o núcleos. \cite{pacheco2011introduction}

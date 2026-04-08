@@ -1,2 +1,8 @@
 \subsection{Aceleración (\textit{Speedup})}
 \label{section:acel}
+
+La \emph{aceleración} es una medida que refleja cuánto aumento de rendimiento se logra al paralelizar una aplicación determinada en comparación con una implementación secuencial. Este se define como:
+
+\[S = \frac{T_s}{T_p}\]
+
+Si se ejecuta un programa con $p$ procesadores (o núcleos), entonces el programa paralelo se ejecutará $p$ veces más rápido que el programa secuencial, dicho de otra manera, $T_p = T_s / p$; a esto se le conoce como \emph{aceleración lineal}, el cual se tiene $S = p$. No obstante, en la práctica es inusual debido a que el uso de múltiples procesadores o núcleos introducen invariablemente algo de sobrecarga, por lo que conforme $p$ incrementa, $S$ va disminuyendo en una fracción cada vez menor del valor ideal (aceleración lineal). \cite{pacheco2011introduction}
