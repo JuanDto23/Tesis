@@ -1,2 +1,12 @@
 \subsection{Clústeres y la arquitectura Beowulf}
 \label{section:beowulf}
+
+El \emph{clustering} es una alternativa a la arquitectura SMP como un acercamiento para proporcionar alto rendimiento y alta disponiblidad. Un \emph{clúster} se puede definir como un grupo de computadoras independientes que están conectadas entre sí mediante una red LAN (\textit{local area network}). Cada computadora en un clúster es típicamente referido como un \emph{nodo}. 
+
+Los clústeres son una combinación de memoria compartida y memoria distribuida, siendo esto un modelo híbrido de organización de memoria (\textit{distributed shared memory}, DSM). Esto se debe a que actualmente los nodos presentes en el clúster suelen tener múltiples procesadores o núcleos, funcionando como una arquitectura SMP. \cite{stallings2012computer} \cite{hennessy2017computer}
+\\
+\par
+La \emph{arquitectura Beowulf} es un tipo de clúster basado en el uso de componentes de hardware y software comercial estándar de bajo costo, siendo un sistema totalmente COTS (\textit{Commodity Off
+The Shelf}), es decir, no contiene de costosos componentes especializados. 
+
+Un clúster Beowulf usualmente consiste de un nodo maestro (o servidor) y de uno o varios nodos esclavos (o clientes), interconectados entre sí mediante algún tipo de red (e.g., LAN). Los nodos del clúster Beowulf utilizan software comercial, como el sistema operativo Linux y la interfaz de paso de mensajes (\textit{Message Passing Interface}, MPI). El nodo maestro controla todo el clúster, el cual proporciona archivos a los nodos esclavos, y también es la consola del clúster y la puerta de enlace con el mundo exterior. En la mayoría de los casos, los nodos cliente no tienen teclados ni monitores, y solo se accede a ellos mediante inicio de sesión remoto (SSH) o, posiblemente, mediante un terminal serial. \cite{sterling1995beowulf} \cite{radajewski1998beowulf}

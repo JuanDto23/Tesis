@@ -10,9 +10,18 @@ La organización de memoria compartida en las arquitecturas SMP también se cono
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{2-Theory/figs/shared_memory.png}
+  \includegraphics[width=0.4\textwidth]{2-Theory/figs/shared_memory.png}
   \caption{Estructura de la organización de memoria compartida. \cite{hennessy2017computer}}
   \label{fig:shared_memory}
 \end{figure}
 
-\textbf{Memoria distribuida (\textit{distributed memory}).} . \cite{hennessy2017computer}
+\textbf{Memoria distribuida (\textit{distributed memory}).} Una arquitectura SMP resulta menos atractiva a medida que aumenta el número de procesadores o núcleos, por esta razón, la mayoría de los multiprocesadores más grandes utilizan alguna forma de memoria distribuida. Para admitir un mayor número de procesadores o núcleos, la memoria debe distribuirse entre ellos en lugar de centralizarse (memoria compartida), de ​​lo contrario, el sistema de memoria no podría satisfacer las demandas de ancho de banda de un mayor número de procesadores o núcleos sin incurrir en una latencia de acceso excesivamente larga. En una organización de memoria distribuida se utilizan tanto redes directas (normalmente mallas multidimensionales), donde no hay dispositivos intermediarios de red y solo conexiones punto a punto; como redes indirectas (e.g., switches), donde la comunicación se realiza a través de un dispositivo intermediario de red. 
+
+Este tipo de organización también se le conoce como acceso no uniforme a la memoria (\textit{nonuniform memory access}, NUMA) porque el tiempo de acceso depende de la ubicación de los datos en memoria. La figura \ref{fig:shared_distributed} muestra la estructura básica de la organización de memoria distribuida, utilizando un tipo de red indirecto. \cite{hennessy2017computer}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{2-Theory/figs/distributed_memory.png}
+  \caption{Estructura de la organización de memoria distribuida. \cite{hennessy2017computer}}
+  \label{fig:shared_distributed}
+\end{figure}
